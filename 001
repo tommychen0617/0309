@@ -1,0 +1,24 @@
+//defuine
+
+int led = 13;
+int inter = 1000;
+int Inter = 1000;
+int del =200;
+//setup
+void setup()
+{
+  pinMode(led, OUTPUT);  
+}
+
+
+//loop
+void loop()
+{
+   if (inter > del){
+      inter = inter - del;
+}else {inter = Inter;}
+  digitalWrite(led, HIGH);
+  delay(inter);
+  digitalWrite(led, LOW);
+  delay(inter);  
+}
