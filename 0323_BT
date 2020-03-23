@@ -2,16 +2,18 @@
 for BT AT command
 */
 //define 
-#include "SoftwareSerial.h"
+#include <SoftwareSerial.h>
 int led = 13;
 char cmd;
 SoftwareSerial BT(8,9);
 //setup
 void setup()
 {
-  pinMode(led, OUTPUT);
-  Serial.begin(9600);
+ pinMode(led, OUTPUT);
+   Serial.begin(9600);
   BT.begin(9600);
+  Serial.println("BT ready");
+  
 }
 //loop
 void loop()
